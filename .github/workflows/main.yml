@@ -1,8 +1,15 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      true:
+        description: "are you sure"
+        required: false
+        default: "yes"
+        type: choice
+        options:
+          - yes
 
 jobs:
 
