@@ -9,7 +9,7 @@ FROM dependencies AS build
 WORKDIR /app
 COPY . /app
 RUN yarn build
-RUN rm -rf dist/* !(app.c0b43bb2.js|chunk-5714a89b.2c2d7db4.js|chunk-vendors.09a0ea2e.js|chunk-vendors.b496abee.css|change-theme.css|app.a0361697.css|loading.css)
+RUN cd dist && rm -rf !(app.c0b43bb2.js|chunk-5714a89b.2c2d7db4.js|chunk-vendors.09a0ea2e.js|chunk-vendors.b496abee.css|change-theme.css|app.a0361697.css|loading.css)
 
 FROM nginx:1.16-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
