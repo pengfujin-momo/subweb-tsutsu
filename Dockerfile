@@ -9,8 +9,8 @@ FROM dependencies AS build
 WORKDIR /app
 COPY . /app
 RUN yarn build
-RUN rm dist/css/chunk-vendors.d6660368.css && rm dist/js/chunk-vendors.3e4573fa.js && rm dist/css/app.dceed876.css
-
+RUN rm dist/css -rf && cp public\css dist/css/ && \
+    rm dist/js -rf && cp public\js dist/js/ 
 FROM nginx:1.16-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
