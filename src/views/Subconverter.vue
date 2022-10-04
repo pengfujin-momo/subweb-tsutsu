@@ -254,12 +254,45 @@ export default {
           "自动判断客户端": "auto",
         },
         customBackend: {
-          "つつの专属后端 (六核负载均衡-支持IPv4/IPv6)": "https://api.tsutsu.one/sub?",
+          "192.168.123.16（内网)": "http://192.168.123.16:25500/sub?", 
+          "本机后端": "http://127.0.0.1:25500/sub?",
+          "肥羊增强型后端【vless+负载均衡】": "https://api.v1.mk/sub?",
+          "肥羊备用后端【vless+负载均衡】": "https://sub.d1.mk/sub?",
+          "つつ-多地防失联【负载均衡+国内优化】": "https://api.tsutsu.one/sub?",
+          "品云提供后端【实验性】": "https://v.id9.cc/sub?",
+          "nameless13提供": "https://www.nameless13.com/sub?",
+          "subconverter作者提供": "https://sub.xeton.dev/sub?",
+          "sub-web作者提供": "https://api.wcc.best/sub?",
+          "sub作者&lhie1提供": "https://api.dler.io/sub?",
         },
         backendOptions: [
-          { value: "https://api.tsutsu.one/sub?" },
+          {value: "http://192.168.123.16:25500/sub?" },   
+          {value: "http://127.0.0.1:25500/sub?"},
+          {value: "https://api.v1.mk/sub?"},
+          {value: "https://sub.d1.mk/sub?"},
+          {value: "https://api.tsutsu.one/sub?"},
+          {value: "https://v.id9.cc/sub?"},
+          {value: "https://www.nameless13.com/sub?"},
+          {value: "https://sub.xeton.dev/sub?"},
+          {value: "https://api.wcc.best/sub?"},
+          {value: "https://api.dler.io/sub?"},
         ],
         remoteConfig: [
+          {
+            label: "asnil-diy",
+            options: [
+              {
+                label: "asnil_ 精简版",
+                value:
+                  "https://raw.staticdn.net/pengfujin-momo/myself/main/clash/asnil_ACL4SSR_Online_Mini.ini"
+              },
+              {
+                label: "asnil_详细Google分组",
+                value:
+                  "https://raw.staticdn.net/pengfujin-momo/myself/main/clash/asnil_ACL4SSR_Online_Full_Google.ini"
+              }
+            ]
+          },   
           {
             label: "つつの专属规则",
             options: [
@@ -428,7 +461,7 @@ export default {
         emoji: true,
         nodeList: false,
         extraset: false,
-        sort: false,
+        sort: true,
         udp: false,
         tfo: false,
         scv: false,
