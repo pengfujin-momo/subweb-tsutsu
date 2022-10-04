@@ -10,7 +10,7 @@
 <a href="https://github.com/lhl77/subweb-tsutsu/blob/master/LICENSE"><img alt="license" src="https://img.shields.io/github/license/lhl77/subweb-tsutsu.svg"/></a>
 </p>
 
-该仓库供主题制作者使用  
+该仓库供主题制作者使用
 
 ### 本地更改+在线部署教程在 [这里](https://github.com/lhl77/subweb-tsutsu/wiki)  （方便快捷）
 
