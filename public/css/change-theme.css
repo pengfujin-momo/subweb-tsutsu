@@ -1,0 +1,83 @@
+.change-theme {
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    background: #000000;
+}
+
+.ul-bar {
+    list-style: none;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden
+}
+
+li {
+    padding: 10px;
+}
+
+ul a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 700;
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+ul a:hover {
+    background: rgb(189, 192, 186);
+}
+
+.btn-on,
+.btn-out {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 150px;
+    height: 40px;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10;
+}
+
+.btn-out {
+    display: inline-flex;
+    background: rgba(0, 0, 0, 0);
+}
+
+.click-bar {
+    background: rgba(110, 117, 164, 0.7);
+    width: 25%;
+    position: fixed;
+    top: 50px;
+    border-radius: 5px;
+    right: -246px;
+    z-index: 10;
+    backdrop-filter: blur(5px);
+}
+
+.copr {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff;
+}
