@@ -8,8 +8,8 @@ RUN yarn install
 FROM dependencies AS build
 WORKDIR /app
 COPY . /app
-RUN yarn build
-RUN rm dist/css/chunk-vendors.d6660368.css && rm dist/js/chunk-vendors.3e4573fa.js && rm dist/css/app.dceed876.css
+# RUN yarn build
+RUN yarn build && rm dist/css/chunk-vendors.d6660368.css && rm dist/css/app.dceed876.css
 
 FROM nginx:1.16-alpine
 COPY --from=build /app/dist /usr/share/nginx/html
