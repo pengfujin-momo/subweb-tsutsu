@@ -284,12 +284,12 @@ export default {
               {
                 label: "asnil_ 精简版",
                 value:
-                  "https://raw.githubusercontents.com/pengfujin-momo/myself/main/clash/asnil_ACL4SSR_Online_Mini.ini"
+                  "https://raw.githubusercontent.com/pengfujin-momo/myself/main/clash/asnil_ACL4SSR_Online_Mini.ini"
               },
               {
                 label: "asnil_详细Google分组",
                 value:
-                  "https://raw.githubusercontents.com/pengfujin-momo/myself/main/clash/asnil_ACL4SSR_Online_Full_Google.ini"
+                  "https://raw.githubusercontent.com/pengfujin-momo/myself/main/clash/asnil_ACL4SSR_Online_Full_Google.ini"
               }
             ]
           },   
@@ -313,7 +313,7 @@ export default {
               },
             ]
           },
-	{
+  {
             label: "つつの机场定制",
             options: [
               {
@@ -329,7 +329,7 @@ export default {
               {
                 label: "Maoport",
                 value:
-                  "https://raw.githubusercontents.com/lhl77/sub-ini/main/tsutsu-maoport-full.ini"
+                  "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-maoport-full.ini"
               },
             ]
           },
@@ -354,27 +354,27 @@ export default {
               {
                 label: "Yuki隐藏国内IP属地-极简",
                 value:
-                  "https://raw.githubusercontents.com/godlikeanyone/Rules/master/subconvert.ini"
+                  "https://raw.githubusercontent.com/godlikeanyone/Rules/master/subconvert.ini"
               },
               {
                 label: "AllenXu精简版多国家",
                 value:
-                  "https://raw.githubusercontents.com/hyt-allen-xu/webcdn/master/cdn_multicountry.ini"
+                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/cdn_multicountry.ini"
               },
               {
                 label: "AllenXu小机场专用",
                 value:
-                  "https://raw.githubusercontents.com/hyt-allen-xu/webcdn/master/smallairport.ini"
+                  "https://raw.githubusercontent.com/hyt-allen-xu/webcdn/master/smallairport.ini"
               },
               {
                 label: "酷酷规则",
                 value:
-                  "https://raw.githubusercontents.com/xiaoshenxian233/cool/rule/coolcool.ini"
+                  "https://raw.githubusercontent.com/xiaoshenxian233/cool/rule/coolcool.ini"
               },
               {
                 label: "NormalPeople 规则集 (仅P核)",
                 value:
-                  "https://raw.githubusercontents.com/wyk19/subconverter-web/master/rules/rule-set.ini"
+                  "https://raw.githubusercontent.com/wyk19/subconverter-web/master/rules/rule-set.ini"
               },
             ]
           },
@@ -540,7 +540,7 @@ export default {
     goToProject() {
       window.open(project);
     },
-	gotoTgChannel() {
+  gotoTgChannel() {
       window.open(tgBotLink);
     },
     gotoGayhub() {
