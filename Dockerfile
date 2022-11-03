@@ -1,5 +1,5 @@
 # ---- Dependencies ----
-FROM node:lts-alpine AS dependencies
+FROM node:12-alpine AS dependencies
 WORKDIR /app
 COPY package.json ./
 RUN yarn install
@@ -8,8 +8,7 @@ RUN yarn install
 FROM dependencies AS build
 WORKDIR /app
 COPY . /app
-# RUN yarn build
-RUN yarn build 
+RUN yarn build
 RUN rm dist/css/chunk-vendors.d6660368.css && rm dist/css/app.dceed876.css
 
 FROM nginx:1.16-alpine
