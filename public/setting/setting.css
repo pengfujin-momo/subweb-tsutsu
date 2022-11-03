@@ -1,7 +1,7 @@
 /* 背景图片设置 在目录中替换相应文件即可： *//**//**//**//**//**//**//**/
     body
     {
-        background-image:url('https://api.vvhan.com/api/bing');
+        background-image:url('https://api.bimg.cc/today?w=1920&h=1080&mkt=zh-CN');
         background-repeat:no-repeat;
         background-size:cover;
         background-position: center center;
