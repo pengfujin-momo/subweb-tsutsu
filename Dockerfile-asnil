@@ -1,21 +1,16 @@
-# ---- Base Node ----
-FROM node:14-alpine AS base
+# ---- Dependencies ----
+FROM node:12-alpine AS dependencies
 WORKDIR /app
-COPY package*.json ./
-RUN npm set progress=false && npm config set depth 0 && npm cache clean --force
-RUN npm install --only=production && cp -R node_modules production_node_modules
-RUN npm install
+COPY package.json ./
+RUN yarn install
 
-# ---- Dependencies and Build ----
-FROM base AS build
+# ---- Build ----
+FROM dependencies AS build
 WORKDIR /app
-COPY . .
-RUN npm run build
+COPY . /app
+RUN yarn build
 
-# ---- Release ----
-FROM nginx:stable-alpine AS release
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=build /app/build .
+FROM nginx:1.16-alpine
+COPY --from=build /app/dist /usr/share/nginx/html
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+CMD [ "nginx", "-g", "daemon off;" ]
